@@ -106,13 +106,13 @@ const prevBtn1 = document.getElementById('prev-btn1');
 const nextBtn1 = document.getElementById('next-btn1');
 const carouselImage = document.getElementById('carousel-image');
 const images = {
-    coupleOneImages: ['./assets/couple-1-1.jpg', './assets/couple-1-2.jpg', './assets/couple-1-3.jpg', './assets/couple-1-4.jpg', './assets/couple-1-5.jpg'],
-    coupleTwoImages: ['./assets/couple-2-1.jpg', './assets/couple-2-2.jpg', './assets/couple-2-3.jpg', './assets/couple-2-4.jpg'],
-    coupleThreeImages: ['./assets/couple-3-1.jpg', './assets/couple-3-2.jpg', './assets/couple-3-3.jpg', './assets/couple-3-4.jpg'],
-    coupleFourImages: ['./assets/couple-4-1.jpg', './assets/couple-4-2.jpg', './assets/couple-4-3.jpg', './assets/couple-4-4.jpg', './assets/couple-4-5.jpg'],
-    coupleFiveImages: ['./assets/couple-5-1.jpg', './assets/couple-5-2.jpg', './assets/couple-5-3.jpg', './assets/couple-5-4.jpg', './assets/couple-5-5.jpg'],
-    coupleSixImages: ['./assets/couple-6-1.jpg', './assets/couple-6-2.jpg', './assets/couple-6-3.jpg'],
-    coupleSevenImages: ['./assets/couple-7-1.jpg', './assets/couple-7-2.jpg', './assets/couple-7-3.jpg', './assets/couple-7-4.jpg'],
+    coupleOneImages: ['./assets/couples-1-1.jpg', './assets/couples-1-2.jpg', './assets/couples-1-3.jpg', './assets/couples-1-4.jpg', './assets/couples-1-5.jpg'],
+    coupleTwoImages: ['./assets/couples-2-1.jpg', './assets/couples-2-2.jpg', './assets/couples-2-3.jpg', './assets/couples-2-4.jpg'],
+    coupleThreeImages: ['./assets/couples-3-1.jpg', './assets/couples-3-2.jpg', './assets/couples-3-3.jpg', './assets/couples-3-4.jpg'],
+    coupleFourImages: ['./assets/couples-4-1.jpg', './assets/couples-4-2.jpg', './assets/couples-4-3.jpg', './assets/couples-4-4.jpg', './assets/couples-4-5.jpg'],
+    coupleFiveImages: ['./assets/couples-5-1.jpg', './assets/couples-5-2.jpg', './assets/couples-5-3.jpg', './assets/couples-5-4.jpg', './assets/couples-5-5.jpg'],
+    coupleSixImages: ['./assets/couples-6-1.jpg', './assets/couples-6-2.jpg', './assets/couples-6-3.jpg'],
+    coupleSevenImages: ['./assets/couples-7-1.jpg', './assets/couples-7-2.jpg', './assets/couples-7-3.jpg', './assets/couples-7-4.jpg'],
 }
 var currentImagesAlbum = 'coupleOneImages';
 
