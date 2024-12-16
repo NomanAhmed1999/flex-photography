@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX Photography</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.1/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="./assets/flex-logo.jpeg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+    <header class="bg-black text-white flex justify-between items-center p-4">
+        <div class="text-2xl font-bold">
+            <img class="w-16" src="./assets/flex-logo.jpeg" />
+        </div>
+        <nav class="hidden md:flex space-x-4">
+            <a href="#home" class="hover:text-yellow-300">Home</a>
+            <a href="#gallery" class="hover:text-yellow-300">Our Work</a>
+            <a href="#testimonials" class="hover:text-yellow-300">Testimonials</a>
+            <a href="#packages" class="hover:text-yellow-300">Packages</a>
+            <a href="#clients" class="hover:text-yellow-300">Clients</a>
+        </nav>
+        <div class="md:hidden flex items-center">
+            <button id="mobile-menu" class="text-yellow-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M3 5h14a1 1 0 110 2H3a1 1 0 110-2zm0 5h14a1 1 0 110 2H3a1 1 0 110-2zm0 5h14a1 1 0 110 2H3a1 1 0 110-2z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <nav id="mobile-menu-dropdown" class="md:hidden bg-black text-white hidden">
+        <a href="#home" class="block px-4 py-2 hover:bg-yellow-300">Home</a>
+        <a href="#gallery" class="block px-4 py-2 hover:bg-yellow-300">Our Work</a>
+        <a href="#testimonials" class="block px-4 py-2 hover:bg-yellow-300">Testimonials</a>
+        <a href="#packages" class="block px-4 py-2 hover:bg-yellow-300">Packages</a>
+        <a href="#clients" class="block px-4 py-2 hover:bg-yellow-300">Clients</a>
+    </nav>
+    <main class="w-full overflow-hidden">
+        <!-- <section id="home" class="h-screen flex items-center justify-center bg-gray-900 text-white"> -->
+
+        <section id="home" class="relative h-screen w-full overflow-hidden">
+            <!-- Background Video -->
+            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+                <source src="./assets/iphone-vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Overlay (Optional for better text contrast) -->
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
+
+                <!-- Centered Content -->
+                <div class="flex items-center justify-center h-full text-center text-white px-4">
+                    <div class="w-[50%]">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-10">
+                            WEDDING AND STYLESH PHOTSHOT
+                        </h1>
+                        <p class="text-lg md:text-xl font-light mb-6">
+                            Capturing Moments That Matter
+                        </p>
+                        <a href="#gallery"
+                            class="inline-block px-6 py-3 bg-gray-400 text-black font-medium rounded hover:bg-yellow-500 transition">
+                            Explore Gallery
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="fixed top-36 right-3 z-50 flex flex-col gap-5">
+            <a href="https://www.facebook.com/p/Flex-Digital-Agency-61552695205056/" target="_blank" class="text-white hover:text-[#FFED02]">
+                <i class="text-lg fab hover:text-yellow-300 fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/" target="_blank" class="text-white hover:text-[#FFED02]">
+                <i class="text-lg fab hover:text-yellow-300 fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/flex_digitalagency/" target="_blank" class="text-white hover:text-[#FFED02]">
+                <i class="text-lg fab hover:text-yellow-300 fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCmT6zzT8kCQ2uxD1dlRAS6Q" target="_blank" class="text-white hover:text-[#FFED02]">
+                <i class="text-lg fab hover:text-yellow-300 fa-youtube"></i>
+            </a>
+        </div>
+
+        <div class="fixed top-[85%] right-5 z-50">
+            <a href="https://wa.me/03020295928" target="_blank">
+                <img class="w-20 cursor-pointer" src="./assets/whatsapp-icon.png" alt="" srcset="">
+            </a>
+        </div>
+
+
+
+        <section id="gallery" class="text-gray-600 body-font bg-black">
+            <h2 class="text-2xl p-4 font-bold text-center text-yellow-300">Our Works.</h2>
+            <div class="container px-5 py-24 mx-auto flex flex-wrap">
+                <div class="flex flex-wrap md:-m-2 -m-1">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                        <img onclick="openModal('coupleOneImages')" alt="gallery"
+                            class="w-full object-cover h-full object-center block border border-yellow-300 cursor-pointer"
+                            src="./assets/couple-1-1.jpg">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                        <img onclick="openModal('coupleTwoImages')" alt="gallery"
+                            class="w-full object-cover h-full object-center block border border-yellow-300 cursor-pointer"
+                            src="./assets/couple-2-1.jpg">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                        <img onclick="openModal('coupleThreeImages')" alt="gallery"
+                            class="w-full object-cover h-full object-center block border border-yellow-300 cursor-pointer"
+                            src="./assets/couple-3-1.jpg">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                        <img onclick="openModal('coupleFourImages')" alt="gallery"
+                            class="w-full object-cover h-full object-center block border border-yellow-300 cursor-pointer"
+                            src="./assets/couple-4-1.jpg">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                        <img onclick="openModal('coupleFiveImages')" alt="gallery"
+                            class="w-full object-cover h-full object-center block border border-yellow-300 cursor-pointer"
+                            src="./assets/couple-5-1.jpg">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                        <img onclick="openModal('coupleSixImages')" alt="gallery"
+                            class="w-full object-cover h-full object-center block border border-yellow-300 cursor-pointer"
+                            src="./assets/couple-6-1.jpg">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                        <img onclick="openModal('coupleSevenImages')" alt="gallery"
+                            class="w-full object-cover h-full object-center block border border-yellow-300 cursor-pointer"
+                            src="./assets/couple-7-1.jpg">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                        <img onclick="openModal('coupleOneImages')" alt="gallery"
+                            class="w-full object-cover h-full object-center block border border-yellow-300 cursor-pointer"
+                            src="./assets/couple-1-2.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="testimonials"
+            class="bg-cover bg-center bg-[url('./assets/wedding-img.webp')] md:min-h-screen min-h-[70vh] flex justify-center items-center">
+            <section class="text-gray-100 py-20 overflow-hidden">
+                <h2 class="text-3xl font-bold text-center mb-8 text-yellow-300">Testimonials</h2>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="relative max-w-5xl mx-auto">
+                    <!-- Carousel Container -->
+                    <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Testimonial 1 -->
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 h-[300px] backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <img src="https://via.placeholder.com/50" alt="client1"
+                                        class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-bold text-lg">John Doe</h4>
+                                        <span class="text-sm text-yellow-300">Photographer</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="text-lg italic mb-2 ms-4 mt-5">Amazing service and top-notch quality! Highly
+                                    recommended. Their team truly exceeded my expectations. Great work!
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <img src="https://via.placeholder.com/50" alt="client1"
+                                        class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-bold text-lg">John Doe</h4>
+                                        <span class="text-sm text-yellow-300">Photographer</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="text-lg italic mb-2 ms-4 mt-5">Their team truly exceeded my expectations.
+                                    Great work!!
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <img src="https://via.placeholder.com/50" alt="client1"
+                                        class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-bold text-lg">John Doe</h4>
+                                        <span class="text-sm text-yellow-300">Photographer</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="text-lg italic mb-2 ms-4 mt-5">Ammazing Expirence
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <img src="https://via.placeholder.com/50" alt="client1"
+                                        class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-bold text-lg">John Doe</h4>
+                                        <span class="text-sm">Photographer</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="text-lg italic mb-2 ms-4 mt-5">Amazing service and top-notch quality! Highly
+                                    recommended. Their team truly exceeded my expectations. Great work!
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button id="prev-btn"
+                        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#FFED02] text-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-800 hover:text-[#FFED02] transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next-btn"
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#FFED02] text-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-800 hover:text-[#FFED02] transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+        </section>
+
+
+        <section id="packages"
+            class="md:min-h-screen min-h-[70vh] bg-gray-800 text-gray-100 flex justify-center items-center py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8 text-yellow-300">Our Wedding Packages</h2>
+
+                <!-- Main Accordion -->
+                <div class="space-y-4">
+                    <!-- Basic Packages -->
+                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="border border-gray-700 rounded-md">
+                        <button id="basicToggle"
+                            class="w-full text-left flex items-center justify-between px-6 py-4 bg-gray-800 hover:bg-gray-700">
+                            <span class="text-lg font-bold text-white">Basic Packages</span>
+                            <span id="basicIcon" class="transform transition-transform duration-300">+</span>
+                        </button>
+                        <div id="basicContent" class="hidden bg-gray-800">
+                            <!-- Subcategories -->
+                            <div class="space-y-4">
+                                <!-- One Day -->
+                                <div>
+                                    <button
+                                        class="subToggle w-full text-left flex items-center justify-between px-6 py-4 bg-gray-700 hover:bg-gray-600">
+                                        <span class="text-gray-300 font-semibold">One Day</span>
+                                        <span class="toggleIcon">+</span>
+                                    </button>
+                                    <div class="hidden subContent px-6 py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <!-- Package 1 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">BASIC</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">14,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Single Photographer</li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>USB</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 2 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">STANDARD</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">25,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Single Photographer</li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>USB</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 3 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">PREMIUM</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Single Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage <span class="text-sm">(Each Day)</span></li>
+                                                    <li>USB</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Two Days -->
+                                <div>
+                                    <button
+                                        class="subToggle w-full text-left flex items-center justify-between px-6 py-4 bg-gray-700 hover:bg-gray-600">
+                                        <span class="text-gray-300 font-semibold">Two Days</span>
+                                        <span class="toggleIcon">+</span>
+                                    </button>
+                                    <div class="hidden subContent px-6 py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <!-- Package 1 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">BASIC</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">25,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Single Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length <span class="text-sm">(Each Day)</span>
+                                                    </li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>USB</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 2 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">STANDARD</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">49,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Single Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length <span class="text-sm">(Each Day)</span>
+                                                    </li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>USB</li>
+                                                    <li>2 Digital Album</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 3 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">PREMIUM</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">64,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Single Photographer</li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>USB</li>
+                                                    <li>1 Digital Album</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Three Days -->
+                                <div>
+                                    <button
+                                        class="subToggle w-full text-left flex items-center justify-between px-6 py-4 bg-gray-700 hover:bg-gray-600">
+                                        <span class="text-gray-300 font-semibold">Three Days</span>
+                                        <span class="toggleIcon">+</span>
+                                    </button>
+                                    <div class="hidden subContent px-6 py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <!-- Package 1 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">BASIC</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Single Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li>4-5 Hours Coverage <span class="text-sm">(Each Day)</span></li>
+                                                    <li>USB</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 2 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">STANDARD</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">69,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Single Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length <span class="text-sm">(Each Day)</span>
+                                                    </li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>USB</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 3 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">PREMIUM</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">99,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Single Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length <span class="text-sm">(Each Day)</span>
+                                                    </li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>USB</li>
+                                                    <li>2 Digital Album</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Signature Packages -->
+                    <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="border border-gray-700 rounded-md">
+                        <button id="signatureToggle"
+                            class="w-full text-left flex items-center justify-between px-6 py-4 bg-gray-800 hover:bg-gray-700">
+                            <span class="text-lg font-bold text-white">Signature Packages</span>
+                            <span id="signatureIcon" class="transform transition-transform duration-300">+</span>
+                        </button>
+                        <div id="signatureContent" class="hidden bg-gray-800">
+                            <div class="space-y-4">
+                                <!-- One Day -->
+                                <div>
+                                    <button
+                                        class="subToggle w-full text-left flex items-center justify-between px-6 py-4 bg-gray-700 hover:bg-gray-600">
+                                        <span class="text-gray-300 font-semibold">One Day</span>
+                                        <span class="toggleIcon">+</span>
+                                    </button>
+                                    <div class="hidden subContent px-6 py-4">
+
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <!-- Package 1 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">MINI</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Double Photographer</li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Couple Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li>Group & Gathering</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>USB</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 2 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">IDEAL</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Double Photographer</li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Couple Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li>Group & Gathering</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>Drone - USB</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 3 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">SIGNATURE</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">54,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Double Photographer</li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Couple Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li>Group & Gathering</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>Day Light Outdoor Shoot</li>
+                                                    <li>Drone - USB</li>
+                                                    <li>1 Digital Album</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Two Days -->
+                                <div>
+                                    <button
+                                        class="subToggle w-full text-left flex items-center justify-between px-6 py-4 bg-gray-700 hover:bg-gray-600">
+                                        <span class="text-gray-300 font-semibold">Two Days</span>
+                                        <span class="toggleIcon">+</span>
+                                    </button>
+                                    <div class="hidden subContent px-6 py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <!-- Package 1 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">MINI</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">64,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Double Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Couple Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li>Group & Gathering</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage <span class="text-sm">(Each Day)</span></li>
+                                                    <li>USB</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 2 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">IDEAL</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">79,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Double Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Couple Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage <span class="text-sm">(Each Day)</span></li>
+                                                    <li>1 Day Drone - USB</li>
+                                                    <li>2 Digital Album</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 3 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">SIGNATURE</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">99,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Double Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Couple Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>1 Day Light Outdoor Shoot</li>
+                                                    <li>1 Day Drone - USB</li>
+                                                    <li>2 Digital Album</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Three Days -->
+                                <div>
+                                    <button
+                                        class="subToggle w-full text-left flex items-center justify-between px-6 py-4 bg-gray-700 hover:bg-gray-600">
+                                        <span class="text-gray-300 font-semibold">Three Days</span>
+                                        <span class="toggleIcon">+</span>
+                                    </button>
+                                    <div class="hidden subContent px-6 py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <!-- Package 1 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">MINI</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">99,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Double Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Couple Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li>Group & Gathering</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage <span class="text-sm">(Each Day)</span></li>
+                                                    <li>1 Day Light Outdoor Shoot</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 2 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">IDEAL</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">129,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Double Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Couple Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li>Group & Gathering</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>1 Day Double VideoGrapher</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage <span class="text-sm">(Each Day)</span></li>
+                                                    <li>1 Day Light Outdoor Shoot</li>
+                                                    <li>1 Day Drone - USB</li>
+                                                    <li>2 Digital Album</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Package 3 -->
+                                            <div
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                <h3 class="font-bold">SIGNATURE</h3>
+                                                <h3 class="font-bold">PHOTOGRAPHY</h3>
+                                                <p class="text-2xl font-bold text-[#FFED02]">179,999</p>
+                                                <ul class="text-sm mt-2 space-y-1">
+                                                    <li>Double Photographer <span class="text-sm">(Each Day)</span></li>
+                                                    <li>Couple Portraits</li>
+                                                    <li>Couple Solos</li>
+                                                    <li>Family Pictures</li>
+                                                    <li>Group & Gathering</li>
+                                                    <li class="font-bold text-lg">Cinematography</li>
+                                                    <li>2 Day Double VideoGrapher</li>
+                                                    <li>Highlights - Full Length</li>
+                                                    <li>4-5 Hours Coverage</li>
+                                                    <li>2 Day Light Outdoor Shoot</li>
+                                                    <li>2 Day Drone - USB</li>
+                                                    <li>3 Digital Album</li>
+                                                    <li>20x30 Frame - 1 Story Book</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="clients"
+            class="relative min-h-screen bg-cover bg-center bg-[url('https://test.demowebstaging.com/wp-content/uploads/2024/12/fas-khan-e23HVQIGH6Q-unsplash-scaled.jpg')] flex flex-col justify-center items-center text-white py-16"
+            id="clients">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <h2 class="absolute z-10 top-10 text-3xl font-bold text-center mb-8 text-yellow-300">Our Satisfied Clients
+            </h2>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="absolute z-10 container mt-10">
+                <div class="flex justify-around flex-wrap md:flex-row flex-col items-center gap-10 md:gap-0 mt-20">
+                    <!-- Total Clients Counter -->
+                    <div class="client-counter">
+                        <h3 class="text-8xl font-semibold client-number text-center" data-target="1200">0</h3>
+                        <p class="text-xl text-center">Total Clients</p>
+                    </div>
+                    <!-- Total Projects Delivered Counter -->
+                    <div class="client-counter">
+                        <h3 class="text-8xl font-semibold client-number text-center" data-target="1500">0</h3>
+                        <p class="text-xl text-center">Total Projects Delivered</p>
+                    </div>
+                    <!-- Total Pending Projects Counter -->
+                    <div class="client-counter">
+                        <h3 class="text-8xl font-semibold client-number text-center" data-target="300">0</h3>
+                        <p class="text-xl text-center">Total Pending Projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="bg-black text-gray-100 py-8">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-wrap justify-between">
+                    <!-- Footer Logo and Info Section -->
+                    <div class="w-full md:w-[30%] mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold text-[#FFED02] mb-4">Photography Studio</h3>
+                        <p class="text-gray-300">At Flex, we are a team of creative photographers passionate about
+                            turning moments into lasting memories. Specializing in weddings, events,
+                            commercial photography, we bring a blend of artistry and professionalism to every project.
+                        </p>
+                        <p class="mt-4 text-gray-400">© 2024 Photography Studio. All rights reserved.</p>
+                    </div>
+
+                    <!-- Footer Navigation Links -->
+                    <div class="w-full md:w-[30%] mb-6 md:mb-0">
+                        <h4 class="text-lg font-semibold text-[#FFED02] mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-yellow-300">Home</a></li>
+                            <li><a href="#gallery" class="text-gray-300 hover:text-yellow-300">Gallery</a></li>
+                            <li><a href="#packages" class="text-gray-300 hover:text-yellow-300">Packages</a></li>
+                            <li><a href="#testimonials" class="text-gray-300 hover:text-yellow-300">Testimonials</a>
+                            </li>
+                            <li><a href="#contact" class="text-gray-300 hover:text-yellow-300">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Footer Social Media Links -->
+                    <div class="w-full md:w-1/3">
+                        <h4 class="text-lg font-semibold text-[#FFED02] mb-4">Follow Us</h4>
+                        <div class="flex space-x-6">
+                            <a href="https://www.facebook.com/p/Flex-Digital-Agency-61552695205056/" target="_blank" class="text-gray-300 hover:text-[#FFED02]">
+                                <i class="fab hover:text-yellow-300 fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/" target="_blank" class="text-gray-300 hover:text-[#FFED02]">
+                                <i class="fab hover:text-yellow-300 fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/flex_digitalagency/" target="_blank" class="text-gray-300 hover:text-[#FFED02]">
+                                <i class="fab hover:text-yellow-300 fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCmT6zzT8kCQ2uxD1dlRAS6Q" target="_blank" class="text-gray-300 hover:text-[#FFED02]">
+                                <i class="fab hover:text-yellow-300 fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </main>
+
+
+
+    <div id="image-modal"
+        class="fixed top-0 left-0 w-full h-screen bg-black flex justify-center items-center z-50 hidden">
+        <div class="relative max-w-4xl w-full bg-black rounded-lg">
+            <!-- Close Button -->
+
+            <!-- Carousel Container -->
+            <div class="flex items-center justify-between">
+                <!-- Previous Button -->
+                <button id="prev-btn1" class="text-white bg-gray-700 p-2 rounded-full hover:bg-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+
+
+                <!-- Image Frame -->
+                <div class="relative h-[90vh] max-w-lg border-4 border-gray-900 rounded-lg overflow-hidden">
+
+                    <button id="close-modal"
+                        class="absolute top-2 right-2 bg-gray-700 text-white w-10 h-10 rounded-full p-2 hover:bg-gray-500">
+                        &times;
+                    </button>
+
+                    <img id="carousel-image" class="h-full object-contain cursor-zoom-in" src="./assets/couple-1-1.jpg"
+                        alt="Gallery Image">
+                </div>
+
+                <!-- Next Button -->
+                <button id="next-btn1" class="text-white bg-gray-700 p-2 rounded-full hover:bg-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        AOS.init();
+      </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
