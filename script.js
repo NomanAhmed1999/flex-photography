@@ -73,11 +73,11 @@ function animateCounter() {
 
         const updateCount = () => {
             if (count < target) {
-                count += increment;
-                counter.textContent = Math.ceil(count);
+                count = count + increment;
+                counter.textContent = `${Math.ceil(count)}`;
                 requestAnimationFrame(updateCount);
             } else {
-                counter.textContent = target;
+                counter.textContent = `${target}`;
             }
         };
 
@@ -113,6 +113,7 @@ const images = {
     coupleFiveImages: ['./assets/couples-5-1.jpg', './assets/couples-5-2.jpg', './assets/couples-5-3.jpg', './assets/couples-5-4.jpg', './assets/couples-5-5.jpg'],
     coupleSixImages: ['./assets/couples-6-1.jpg', './assets/couples-6-2.jpg', './assets/couples-6-3.jpg'],
     coupleSevenImages: ['./assets/couples-7-1.jpg', './assets/couples-7-2.jpg', './assets/couples-7-3.jpg', './assets/couples-7-4.jpg'],
+    coupleEightImages: ['./assets/couples-8-1.jpg', './assets/couples-8-2.jpg', './assets/couples-8-3.jpg'],
 }
 var currentImagesAlbum = 'coupleOneImages';
 
@@ -136,6 +137,8 @@ function openModal(coupleImages) {
         carouselImage.src = images.coupleSixImages[currentIndex1]
     } else if (coupleImages == 'coupleSevenImages') {
         carouselImage.src = images.coupleSevenImages[currentIndex1]
+    } else if (coupleImages == 'coupleEightImages') {
+        carouselImage.src = images.coupleEightImages[currentIndex1]
     }
 
     modal.classList.remove('hidden');
@@ -192,3 +195,64 @@ carouselImage.addEventListener('click', () => {
     }
     zoomed = !zoomed;
 });
+
+
+
+
+// Home Slider
+const slider = document.getElementById("slider");
+const slides = document.querySelectorAll("#slider > div");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+let currentIndexHome = 0;
+let slideInterval;
+
+// Go to next slide
+function goToNextSlide() {
+    currentIndexHome = (currentIndexHome + 1) % slides.length;
+    updateSliderPosition();
+}
+
+// Go to previous slide
+function goToPrevSlide() {
+    console.log('pre');
+
+    currentIndexHome =
+        (currentIndexHome - 1 + slides.length) % slides.length;
+    updateSliderPosition();
+}
+
+// Update Slider Position
+function updateSliderPosition() {
+    slider.style.transform = `translateX(-${currentIndexHome * 100}%)`;
+}
+
+// Start Auto Slide
+function startAutoSlide() {
+    slideInterval = setInterval(goToNextSlide, 3000); // Auto-slide every 3 seconds
+}
+
+// Stop Auto Slide
+function stopAutoSlide() {
+    clearInterval(slideInterval);
+}
+
+// Restart Auto Slide when navigating manually
+function restartAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+}
+
+// Event Listeners
+next.addEventListener("click", () => {
+    goToNextSlide();
+    restartAutoSlide();
+});
+
+prev.addEventListener("click", () => {
+    goToPrevSlide();
+    restartAutoSlide();
+});
+
+// Initialize the Slider
+startAutoSlide();

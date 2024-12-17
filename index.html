@@ -11,6 +11,7 @@
     <link rel="icon" href="./assets/flex-logo.jpeg" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 </head>
 
 <body>
@@ -44,27 +45,63 @@
     <main class="w-full overflow-hidden">
         <!-- <section id="home" class="h-screen flex items-center justify-center bg-gray-900 text-white"> -->
 
-        <section id="home" class="relative h-screen w-full overflow-hidden">
+        <section id="home" class="relative w-full overflow-hidden">
             <!-- Background Video -->
-            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+            <!-- <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
                 <source src="./assets/iphone-vid.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+            </video> -->
+
+
+            <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+                <!-- Slide 1 -->
+                <div class="w-full flex-shrink-0">
+                    <img src="./assets/couples-5-3.jpg" alt="Slide 2"
+                        class="w-full h-full md:h-[500px] object-cover object-center" />
+                </div>
+                <!-- Slide 2 -->
+                <div class="w-full flex-shrink-0">
+                    <img src="./assets/couples-2-3.jpg" alt="Slide 2"
+                        class="w-full h-full md:h-[500px] object-cover object-center" />
+                </div>
+                <!-- Slide 3 -->
+                <div class="w-full flex-shrink-0">
+                    <img src="./assets/couples-3-1.jpg" alt="Slide 3"
+                        class="w-full h-full md:h-[500px] object-cover object-center" />
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button id="prev"
+                class="absolute z-30 top-[80%] md:top-[77%] left-4 -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 transition">
+                &#10094;
+            </button>
+            <button id="next"
+                class="absolute z-30 top-[80%] md:top-[77%] right-4 -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 transition">
+                &#10095;
+            </button>
 
             <!-- Overlay (Optional for better text contrast) -->
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30">
 
                 <!-- Centered Content -->
-                <div class="flex items-center justify-center h-full text-center text-white px-4">
-                    <div class="w-[50%]">
+                <div class="flex h-full text-white px-4">
+                    <div class="md:w-[50%] w-full">
                         <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-10">
-                            WEDDING AND STYLESH PHOTSHOT
+                            Welcome to Flex Signature Premium
                         </h1>
-                        <p class="text-lg md:text-xl font-light mb-6">
-                            Capturing Moments That Matter
+                        <p class="text-lg md:text-xl font-light mb-4">
+                            Wedding Photographer In KARACHI
                         </p>
+                        <div class="w-80 h-[1px] bg-white mb-4"></div>
+                        <p>At flex signature, we belive that every wedding story is a unique story waiting to be told.
+                            We are a team of top professional photographers.
+                            Let us turn your wedding memories into stunning photographs that will last a life time.
+                            Explore our work and discover why we are trusted by families to preserve the most important
+                            day of their lives.</p>
                         <a href="#gallery"
-                            class="inline-block px-6 py-3 bg-gray-400 text-black font-medium rounded hover:bg-yellow-500 transition">
+                            class="mt-4 inline-block px-6 py-3 bg-gray-400 text-black font-medium rounded hover:bg-yellow-500 transition">
                             Explore Gallery
                         </a>
                     </div>
@@ -73,17 +110,21 @@
         </section>
 
 
-        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="fixed top-36 right-3 z-50 flex flex-col gap-5">
-            <a href="https://www.facebook.com/p/Flex-Digital-Agency-61552695205056/" target="_blank" class="text-white hover:text-[#FFED02]">
+        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200"
+            class="fixed top-36 right-3 z-50 flex flex-col gap-5">
+            <a href="https://www.facebook.com/p/Flex-Digital-Agency-61552695205056/" target="_blank"
+                class="text-white hover:text-[#FFED02]">
                 <i class="text-lg fab hover:text-yellow-300 fa-facebook-f"></i>
             </a>
             <a href="https://x.com/" target="_blank" class="text-white hover:text-[#FFED02]">
                 <i class="text-lg fab hover:text-yellow-300 fa-twitter"></i>
             </a>
-            <a href="https://www.instagram.com/flex_digitalagency/" target="_blank" class="text-white hover:text-[#FFED02]">
+            <a href="https://www.instagram.com/flex_digitalagency/" target="_blank"
+                class="text-white hover:text-[#FFED02]">
                 <i class="text-lg fab hover:text-yellow-300 fa-instagram"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCmT6zzT8kCQ2uxD1dlRAS6Q" target="_blank" class="text-white hover:text-[#FFED02]">
+            <a href="https://www.youtube.com/channel/UCmT6zzT8kCQ2uxD1dlRAS6Q" target="_blank"
+                class="text-white hover:text-[#FFED02]">
                 <i class="text-lg fab hover:text-yellow-300 fa-youtube"></i>
             </a>
         </div>
@@ -100,45 +141,53 @@
             <h2 class="text-2xl p-4 font-bold text-center text-yellow-300">Our Works.</h2>
             <div class="container px-5 py-24 mx-auto flex flex-wrap">
                 <div class="flex flex-wrap md:-m-2 -m-1">
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        class="md:p-1 p-1 w-full md:w-1/4">
                         <img onclick="openModal('coupleOneImages')" alt="gallery"
                             class="object-cover object-center block border border-yellow-300 cursor-pointer"
                             src="./assets/couples-1-1.jpg">
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        class="md:p-1 p-1 w-full md:w-1/4">
                         <img onclick="openModal('coupleTwoImages')" alt="gallery"
                             class="object-cover object-center block border border-yellow-300 cursor-pointer"
                             src="./assets/couples-2-1.jpg">
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        class="md:p-1 p-1 w-full md:w-1/4">
                         <img onclick="openModal('coupleThreeImages')" alt="gallery"
                             class="object-cover object-center block border border-yellow-300 cursor-pointer"
                             src="./assets/couples-3-1.jpg">
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        class="md:p-1 p-1 w-full md:w-1/4">
                         <img onclick="openModal('coupleFourImages')" alt="gallery"
                             class="object-cover object-center block border border-yellow-300 cursor-pointer"
                             src="./assets/couples-4-1.jpg">
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        class="md:p-1 p-1 w-full md:w-1/4">
                         <img onclick="openModal('coupleFiveImages')" alt="gallery"
                             class="object-cover object-center block border border-yellow-300 cursor-pointer"
                             src="./assets/couples-5-1.jpg">
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        class="md:p-1 p-1 w-full md:w-1/4">
                         <img onclick="openModal('coupleSixImages')" alt="gallery"
                             class="object-cover object-center block border border-yellow-300 cursor-pointer"
                             src="./assets/couples-6-1.jpg">
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        class="md:p-1 p-1 w-full md:w-1/4">
                         <img onclick="openModal('coupleSevenImages')" alt="gallery"
                             class="object-cover object-center block border border-yellow-300 cursor-pointer"
                             src="./assets/couples-7-1.jpg">
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="md:p-1 p-1 w-full md:w-1/4">
-                        <img onclick="openModal('coupleOneImages')" alt="gallery"
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        class="md:p-1 p-1 w-full md:w-1/4">
+                        <img onclick="openModal('coupleEightImages')" alt="gallery"
                             class="object-cover object-center block border border-yellow-300 cursor-pointer"
-                            src="./assets/couples-1-2.jpg">
+                            src="./assets/couples-8-1.jpg">
                     </div>
                 </div>
             </div>
@@ -149,24 +198,69 @@
             class="bg-cover bg-center bg-[url('./assets/wedding-img.webp')] md:min-h-screen min-h-[70vh] flex justify-center items-center">
             <section class="text-gray-100 py-20 overflow-hidden">
                 <h2 class="text-3xl font-bold text-center mb-8 text-yellow-300">Testimonials</h2>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="relative max-w-5xl mx-auto">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                    class="relative max-w-5xl mx-auto">
                     <!-- Carousel Container -->
                     <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
                         <!-- Testimonial 1 -->
                         <div class="flex-shrink-0 w-full px-6">
                             <div
-                                class="rounded-lg p-6 shadow-lg border border-yellow-300 h-[300px] backdrop-blur-[5px]">
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px] backdrop-blur-[5px]">
                                 <div class="flex items-center">
-                                    <img src="https://via.placeholder.com/50" alt="client1"
-                                        class="w-12 h-12 rounded-full mr-4">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        S</div>
                                     <div>
-                                        <h4 class="font-bold text-lg">John Doe</h4>
-                                        <span class="text-sm text-yellow-300">Photographer</span>
+                                        <h4 class="font-bold text-lg">Sharjeel Ghulam Nabi</h4>
+                                        <span class="text-sm text-yellow-300">1 review</span>
                                     </div>
                                 </div>
                                 <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
-                                <p class="text-lg italic mb-2 ms-4 mt-5">Amazing service and top-notch quality! Highly
-                                    recommended. Their team truly exceeded my expectations. Great work!
+                                <p class="italic mb-2 ms-4 mt-5">I just wanted to take a moment to express my
+                                    heartfelt thanks for the incredible job you did capturing our wedding. Your
+                                    attention to detail and ability to capture the emotions of the day were truly
+                                    impressive.
+
+                                    The photos turned out beautiful, and we appreciate how you managed to blend into the
+                                    background while still getting every special moment. Your creativity and
+                                    professionalism made the entire process enjoyable, and we couldn’t be happier with
+                                    the results.
+
+                                    Thank you once again for your hard work and dedication. We’ll cherish these memories
+                                    for a lifetime!
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        M</div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Miss universe</h4>
+                                        <span class="text-sm text-yellow-300">1 review</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="italic mb-2 ms-4 mt-5">*Flex Digital Photographer* is the best studio.
+                                    I highly recommended this flex studio💫Appreciation is a wonderful work 🌸Awosme
+                                    marvellous GlassAlbum👍🏻Quality level A1 Excellence Splendid 🌙
+                                    In Sha Allah soon i will contact your studio about my all family events again and
+                                    again.
+                                    The female photographer *Miss SyedaMunaima* was not only a master behind the camera
+                                    but also a true professional. They arrived on time, maintained a friendly and
+                                    approachable demeanor, and made us feel at ease throughout the session. They
+                                    patiently listened to our ideas and incorporated them seamlessly into the shoot.”
+                                    She is very great 👍🏻 i really appreciated her.
                                 </p>
                                 <div class="ms-4">
                                     <i class="fas fa-star text-yellow-300"></i>
@@ -179,18 +273,20 @@
                         </div>
                         <div class="flex-shrink-0 w-full px-6">
                             <div
-                                class="rounded-lg p-6 shadow-lg border border-yellow-300 h-[300px]  backdrop-blur-[5px]">
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px]  backdrop-blur-[5px]">
                                 <div class="flex items-center">
-                                    <img src="https://via.placeholder.com/50" alt="client1"
-                                        class="w-12 h-12 rounded-full mr-4">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        M</div>
                                     <div>
-                                        <h4 class="font-bold text-lg">John Doe</h4>
-                                        <span class="text-sm text-yellow-300">Photographer</span>
+                                        <h4 class="font-bold text-lg">Maryam Siddiqui</h4>
+                                        <span class="text-sm text-yellow-300">1 review</span>
                                     </div>
                                 </div>
                                 <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
-                                <p class="text-lg italic mb-2 ms-4 mt-5">Their team truly exceeded my expectations.
-                                    Great work!!
+                                <p class="italic mb-2 ms-4 mt-5">Really likes the whole experience working with you.
+                                    Great pictures,videos and album! From my side your digital agency is highly
+                                    recommended❤️
                                 </p>
                                 <div class="ms-4">
                                     <i class="fas fa-star text-yellow-300"></i>
@@ -203,41 +299,166 @@
                         </div>
                         <div class="flex-shrink-0 w-full px-6">
                             <div
-                                class="rounded-lg p-6 shadow-lg border border-yellow-300 h-[300px]  backdrop-blur-[5px]">
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px]  backdrop-blur-[5px]">
                                 <div class="flex items-center">
-                                    <img src="https://via.placeholder.com/50" alt="client1"
-                                        class="w-12 h-12 rounded-full mr-4">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        U</div>
                                     <div>
-                                        <h4 class="font-bold text-lg">John Doe</h4>
-                                        <span class="text-sm text-yellow-300">Photographer</span>
-                                    </div>
-                                </div>
-                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
-                                <p class="text-lg italic mb-2 ms-4 mt-5">Ammazing Expirence
-                                </p>
-                                <div class="ms-4">
-                                    <i class="fas fa-star text-yellow-300"></i>
-                                    <i class="fas fa-star text-yellow-300"></i>
-                                    <i class="fas fa-star text-yellow-300"></i>
-                                    <i class="fas fa-star text-yellow-300"></i>
-                                    <i class="fas fa-star text-yellow-300"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-shrink-0 w-full px-6">
-                            <div
-                                class="rounded-lg p-6 shadow-lg border border-yellow-300 h-[300px]  backdrop-blur-[5px]">
-                                <div class="flex items-center">
-                                    <img src="https://via.placeholder.com/50" alt="client1"
-                                        class="w-12 h-12 rounded-full mr-4">
-                                    <div>
-                                        <h4 class="font-bold text-lg">John Doe</h4>
+                                        <h4 class="font-bold text-lg">Urooj Malik</h4>
                                         <span class="text-sm">Photographer</span>
                                     </div>
                                 </div>
                                 <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
-                                <p class="text-lg italic mb-2 ms-4 mt-5">Amazing service and top-notch quality! Highly
-                                    recommended. Their team truly exceeded my expectations. Great work!
+                                <p class="italic mb-2 ms-4 mt-5">The staff and the camera_man was so cooperative,respective and well mannered. The pictures came out really great at such a reasonable price..Thank you so much service is great mera expression bhut achy raha and
+                                    Really happy by their work🤍✨
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        H</div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Hasnain Bacha</h4>
+                                        <span class="text-sm">1 review</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="italic mb-2 ms-4 mt-5">Love your team the guy who took family pictures are so humble and professional.. keep it up
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        H</div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Khan Sarwar Iqbal</h4>
+                                        <span class="text-sm">3 reviews·3 photos</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="italic mb-2 ms-4 mt-5">The photographic quality is good, rates were good but customer services and satisfaction is worst
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-gray-300"></i>
+                                    <i class="fas fa-star text-gray-300"></i>
+                                    <i class="fas fa-star text-gray-300"></i>
+                                    <i class="fas fa-star text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        W</div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Wahab Gujjar</h4>
+                                        <span class="text-sm">1 review</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="italic mb-2 ms-4 mt-5">Thank you so much service is great mera expression bhut achy raha and amazing work 💗😍
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        H</div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Huzaifa Amir</h4>
+                                        <span class="text-sm">Local Guide·2 reviews</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="italic mb-2 ms-4 mt-5">Customer service & Quality Good
+                                    I had Amazing experience Highly recommend
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        F</div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Fallah Khan</h4>
+                                        <span class="text-sm">1 review</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="italic mb-2 ms-4 mt-5">Great n excellent work highly recommended....✌️
+                                </p>
+                                <div class="ms-4">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6">
+                            <div
+                                class="rounded-lg p-6 shadow-lg border border-yellow-300 min-h-[300px]  backdrop-blur-[5px]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="h-10 w-10 flex justify-center items-center rounded-full bg-yellow-500 mr-2">
+                                        M</div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">
+                                            Mohammad Usama</h4>
+                                        <span class="text-sm">2 reviews·1 photo</span>
+                                    </div>
+                                </div>
+                                <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
+                                <p class="italic mb-2 ms-4 mt-5">Big shout out to Flex! Thank you so much flex album videos and especially portraits are great.. Allah blesses you in your life and makes you successful thanks a lot... ❤️
                                 </p>
                                 <div class="ms-4">
                                     <i class="fas fa-star text-yellow-300"></i>
@@ -279,7 +500,8 @@
                 <!-- Main Accordion -->
                 <div class="space-y-4">
                     <!-- Basic Packages -->
-                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="border border-gray-700 rounded-md">
+                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200"
+                        class="border border-gray-700 rounded-md">
                         <button id="basicToggle"
                             class="w-full text-left flex items-center justify-between px-6 py-4 bg-gray-800 hover:bg-gray-700">
                             <span class="text-lg font-bold text-white">Basic Packages</span>
@@ -299,7 +521,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">BASIC</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">14,999</p>
@@ -314,7 +536,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">STANDARD</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">25,999</p>
@@ -331,7 +553,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">PREMIUM</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
@@ -361,7 +583,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">BASIC</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">25,999</p>
@@ -379,7 +601,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">STANDARD</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">49,999</p>
@@ -398,7 +620,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">PREMIUM</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">64,999</p>
@@ -429,7 +651,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">BASIC</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
@@ -444,7 +666,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">STANDARD</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">69,999</p>
@@ -462,7 +684,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">PREMIUM</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">99,999</p>
@@ -487,7 +709,8 @@
                     </div>
 
                     <!-- Signature Packages -->
-                    <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="border border-gray-700 rounded-md">
+                    <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200"
+                        class="border border-gray-700 rounded-md">
                         <button id="signatureToggle"
                             class="w-full text-left flex items-center justify-between px-6 py-4 bg-gray-800 hover:bg-gray-700">
                             <span class="text-lg font-bold text-white">Signature Packages</span>
@@ -507,7 +730,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">MINI</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
@@ -525,7 +748,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">IDEAL</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
@@ -543,7 +766,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">SIGNATURE</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">54,999</p>
@@ -576,7 +799,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">MINI</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">64,999</p>
@@ -594,7 +817,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">IDEAL</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">79,999</p>
@@ -612,7 +835,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">SIGNATURE</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">99,999</p>
@@ -644,7 +867,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">MINI</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">99,999</p>
@@ -662,7 +885,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">IDEAL</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">129,999</p>
@@ -683,7 +906,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
                                                 <h3 class="font-bold">SIGNATURE</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">179,999</p>
@@ -715,7 +938,7 @@
 
 
         <section id="clients"
-            class="relative min-h-screen bg-cover bg-center bg-[url('https://test.demowebstaging.com/wp-content/uploads/2024/12/fas-khan-e23HVQIGH6Q-unsplash-scaled.jpg')] flex flex-col justify-center items-center text-white py-16"
+            class="relative min-h-screen bg-cover bg-center bg-[url('./assets/couples-4-2.jpg')] flex flex-col justify-center items-center text-white py-16"
             id="clients">
             <div class="absolute inset-0 bg-black opacity-60"></div>
             <h2 class="absolute z-10 top-10 text-3xl font-bold text-center mb-8 text-yellow-300">Our Satisfied Clients
@@ -724,17 +947,17 @@
                 <div class="flex justify-around flex-wrap md:flex-row flex-col items-center gap-10 md:gap-0 mt-20">
                     <!-- Total Clients Counter -->
                     <div class="client-counter">
-                        <h3 class="text-8xl font-semibold client-number text-center" data-target="1200">0</h3>
+                        <h3 class="text-8xl font-semibold client-number text-center inline-block" data-target="1000">0</h3><span class="text-8xl font-semibold">+</span>
                         <p class="text-xl text-center">Total Clients</p>
                     </div>
                     <!-- Total Projects Delivered Counter -->
                     <div class="client-counter">
-                        <h3 class="text-8xl font-semibold client-number text-center" data-target="1500">0</h3>
+                        <h3 class="text-8xl font-semibold client-number text-center" data-target="950">0</h3>
                         <p class="text-xl text-center">Total Projects Delivered</p>
                     </div>
                     <!-- Total Pending Projects Counter -->
                     <div class="client-counter">
-                        <h3 class="text-8xl font-semibold client-number text-center" data-target="300">0</h3>
+                        <h3 class="text-8xl font-semibold client-number text-center" data-target="50">0</h3>
                         <p class="text-xl text-center">Total Pending Projects</p>
                     </div>
                 </div>
@@ -772,16 +995,19 @@
                     <div class="w-full md:w-1/3">
                         <h4 class="text-lg font-semibold text-[#FFED02] mb-4">Follow Us</h4>
                         <div class="flex space-x-6">
-                            <a href="https://www.facebook.com/p/Flex-Digital-Agency-61552695205056/" target="_blank" class="text-gray-300 hover:text-[#FFED02]">
+                            <a href="https://www.facebook.com/p/Flex-Digital-Agency-61552695205056/" target="_blank"
+                                class="text-gray-300 hover:text-[#FFED02]">
                                 <i class="fab hover:text-yellow-300 fa-facebook-f"></i>
                             </a>
                             <a href="https://x.com/" target="_blank" class="text-gray-300 hover:text-[#FFED02]">
                                 <i class="fab hover:text-yellow-300 fa-twitter"></i>
                             </a>
-                            <a href="https://www.instagram.com/flex_digitalagency/" target="_blank" class="text-gray-300 hover:text-[#FFED02]">
+                            <a href="https://www.instagram.com/flex_digitalagency/" target="_blank"
+                                class="text-gray-300 hover:text-[#FFED02]">
                                 <i class="fab hover:text-yellow-300 fa-instagram"></i>
                             </a>
-                            <a href="https://www.youtube.com/channel/UCmT6zzT8kCQ2uxD1dlRAS6Q" target="_blank" class="text-gray-300 hover:text-[#FFED02]">
+                            <a href="https://www.youtube.com/channel/UCmT6zzT8kCQ2uxD1dlRAS6Q" target="_blank"
+                                class="text-gray-300 hover:text-[#FFED02]">
                                 <i class="fab hover:text-yellow-300 fa-youtube"></i>
                             </a>
                         </div>
@@ -847,7 +1073,7 @@
 
     <script>
         AOS.init();
-      </script>
+    </script>
     <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
