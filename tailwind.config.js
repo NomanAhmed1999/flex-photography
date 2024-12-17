@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        stylish: ['StylishFont', 'sans-serif'],
+        dancing: ['"Dancing Script"', 'cursive'],
+        poetsen: ['"Poetsen One"', 'serif'],
       },
     },
   },

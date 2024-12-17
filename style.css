@@ -1,11 +1,25 @@
-@font-face {
-    font-family: 'StylishFont';
-    src: url('/fonts/your-font.woff2') format('woff2'),
-         url('/fonts/your-font.woff') format('woff');
-    font-weight: normal;
+.dancing-script-fonts {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
     font-style: normal;
   }
   
+  .poetsen-one-regular {
+    font-family: "Poetsen One", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+
+  .poetsen-one {
+    font-family: "Poetsen One", serif;
+  }
+
+  .sofia-sans {
+    font-family: "Sofia Sans", sans-serif;
+  }
+
   
   * {
     margin: 0;

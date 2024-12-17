@@ -12,6 +12,15 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poetsen+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+        rel="stylesheet">
+    <link href="./style.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -73,33 +82,32 @@
 
             <!-- Navigation Buttons -->
             <button id="prev"
-                class="absolute z-30 top-[80%] md:top-[77%] left-4 -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 transition">
+                class="absolute hidden z-30 top-[87%] md:top-[85%] left-4 -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 transition">
                 &#10094;
             </button>
             <button id="next"
-                class="absolute z-30 top-[80%] md:top-[77%] right-4 -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 transition">
+                class="absolute hidden z-30 top-[87%] md:top-[85%] right-4 -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 transition">
                 &#10095;
             </button>
 
             <!-- Overlay (Optional for better text contrast) -->
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
-                class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30">
+                class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
 
                 <!-- Centered Content -->
                 <div class="flex h-full text-white px-4">
                     <div class="md:w-[50%] w-full">
-                        <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-10">
+                        <h1 class="text-2xl md:text-6xl mb-4 leading-10 font-medium">
                             Welcome to Flex Signature Premium
                         </h1>
-                        <p class="text-lg md:text-xl font-light mb-4">
+                        <p class="text-lg md:text-xl font-light md:leading-none leading-10 mb-4 dancing-script-fonts">
                             Wedding Photographer In KARACHI
                         </p>
                         <div class="w-80 h-[1px] bg-white mb-4"></div>
-                        <p>At flex signature, we belive that every wedding story is a unique story waiting to be told.
+                        <p class="text-lg sofia-sans leading-8 md:leading-7">At flex signature, we belive that every wedding story is a unique story
+                            waiting to be told.
                             We are a team of top professional photographers.
-                            Let us turn your wedding memories into stunning photographs that will last a life time.
-                            Explore our work and discover why we are trusted by families to preserve the most important
-                            day of their lives.</p>
+                            Let us turn your wedding memories into stunning photographs that will last a life time.</p>
                         <a href="#gallery"
                             class="mt-4 inline-block px-6 py-3 bg-gray-400 text-black font-medium rounded hover:bg-yellow-500 transition">
                             Explore Gallery
@@ -138,7 +146,7 @@
 
 
         <section id="gallery" class="text-gray-600 body-font bg-black">
-            <h2 class="text-2xl p-4 font-bold text-center text-yellow-300">Our Works.</h2>
+            <h2 class="text-4xl md:text-6xl poetsen-one p-4 text-center text-yellow-300">Our Works.</h2>
             <div class="container px-5 py-24 mx-auto flex flex-wrap">
                 <div class="flex flex-wrap md:-m-2 -m-1">
                     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
@@ -195,9 +203,10 @@
 
 
         <section id="testimonials"
-            class="bg-cover bg-center bg-[url('./assets/wedding-img.webp')] md:min-h-screen min-h-[70vh] flex justify-center items-center">
+            class="bg-cover bg-center bg-[url('./assets/testimonials-bg.jpg')] md:min-h-screen min-h-[70vh] flex justify-center items-center">
             <section class="text-gray-100 py-20 overflow-hidden">
-                <h2 class="text-3xl font-bold text-center mb-8 text-yellow-300">Testimonials</h2>
+                <h2 class="text-4xl md:text-6xl poetsen-one font-bold text-center mb-8 text-yellow-300">Testimonials
+                </h2>
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
                     class="relative max-w-5xl mx-auto">
                     <!-- Carousel Container -->
@@ -310,7 +319,10 @@
                                     </div>
                                 </div>
                                 <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
-                                <p class="italic mb-2 ms-4 mt-5">The staff and the camera_man was so cooperative,respective and well mannered. The pictures came out really great at such a reasonable price..Thank you so much service is great mera expression bhut achy raha and
+                                <p class="italic mb-2 ms-4 mt-5">The staff and the camera_man was so
+                                    cooperative,respective and well mannered. The pictures came out really great at such
+                                    a reasonable price..Thank you so much service is great mera expression bhut achy
+                                    raha and
                                     Really happy by their work🤍✨
                                 </p>
                                 <div class="ms-4">
@@ -336,7 +348,8 @@
                                     </div>
                                 </div>
                                 <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
-                                <p class="italic mb-2 ms-4 mt-5">Love your team the guy who took family pictures are so humble and professional.. keep it up
+                                <p class="italic mb-2 ms-4 mt-5">Love your team the guy who took family pictures are so
+                                    humble and professional.. keep it up
                                 </p>
                                 <div class="ms-4">
                                     <i class="fas fa-star text-yellow-300"></i>
@@ -360,7 +373,8 @@
                                     </div>
                                 </div>
                                 <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
-                                <p class="italic mb-2 ms-4 mt-5">The photographic quality is good, rates were good but customer services and satisfaction is worst
+                                <p class="italic mb-2 ms-4 mt-5">The photographic quality is good, rates were good but
+                                    customer services and satisfaction is worst
                                 </p>
                                 <div class="ms-4">
                                     <i class="fas fa-star text-yellow-300"></i>
@@ -384,7 +398,8 @@
                                     </div>
                                 </div>
                                 <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
-                                <p class="italic mb-2 ms-4 mt-5">Thank you so much service is great mera expression bhut achy raha and amazing work 💗😍
+                                <p class="italic mb-2 ms-4 mt-5">Thank you so much service is great mera expression bhut
+                                    achy raha and amazing work 💗😍
                                 </p>
                                 <div class="ms-4">
                                     <i class="fas fa-star text-yellow-300"></i>
@@ -458,7 +473,9 @@
                                     </div>
                                 </div>
                                 <!-- <i class="fas fa-quote-left text-2xl mt-5"></i> -->
-                                <p class="italic mb-2 ms-4 mt-5">Big shout out to Flex! Thank you so much flex album videos and especially portraits are great.. Allah blesses you in your life and makes you successful thanks a lot... ❤️
+                                <p class="italic mb-2 ms-4 mt-5">Big shout out to Flex! Thank you so much flex album
+                                    videos and especially portraits are great.. Allah blesses you in your life and makes
+                                    you successful thanks a lot... ❤️
                                 </p>
                                 <div class="ms-4">
                                     <i class="fas fa-star text-yellow-300"></i>
@@ -493,9 +510,10 @@
 
 
         <section id="packages"
-            class="md:min-h-screen min-h-[70vh] bg-gray-800 text-gray-100 flex justify-center items-center py-20">
+            class="md:min-h-screen min-h-[70vh] bg-black text-gray-100 flex justify-center items-center py-20">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-8 text-yellow-300">Our Wedding Packages</h2>
+                <h2 class="text-4xl md:text-6xl poetsen-one font-bold text-center mb-8 text-yellow-300">Our Wedding
+                    Packages</h2>
 
                 <!-- Main Accordion -->
                 <div class="space-y-4">
@@ -521,7 +539,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">BASIC</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">14,999</p>
@@ -536,7 +554,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">STANDARD</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">25,999</p>
@@ -553,7 +571,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">PREMIUM</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
@@ -583,7 +601,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">BASIC</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">25,999</p>
@@ -601,7 +619,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">STANDARD</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">49,999</p>
@@ -620,7 +638,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">PREMIUM</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">64,999</p>
@@ -651,7 +669,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">BASIC</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
@@ -666,7 +684,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">STANDARD</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">69,999</p>
@@ -684,7 +702,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">PREMIUM</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">99,999</p>
@@ -730,7 +748,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">MINI</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
@@ -748,7 +766,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">IDEAL</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">34,999</p>
@@ -766,7 +784,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">SIGNATURE</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">54,999</p>
@@ -799,7 +817,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">MINI</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">64,999</p>
@@ -817,7 +835,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">IDEAL</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">79,999</p>
@@ -835,7 +853,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">SIGNATURE</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">99,999</p>
@@ -867,7 +885,7 @@
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             <!-- Package 1 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">MINI</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">99,999</p>
@@ -885,7 +903,7 @@
                                             </div>
                                             <!-- Package 2 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">IDEAL</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">129,999</p>
@@ -906,7 +924,7 @@
                                             </div>
                                             <!-- Package 3 -->
                                             <div
-                                                class="border bg-cover bg-center bg-[url('./assets/card-bg-2.jpg')] p-4 text-center rounded-md">
+                                                class="border bg-cover bg-center bg-black border-yellow-300 p-4 text-center rounded-md">
                                                 <h3 class="font-bold">SIGNATURE</h3>
                                                 <h3 class="font-bold">PHOTOGRAPHY</h3>
                                                 <p class="text-2xl font-bold text-[#FFED02]">179,999</p>
@@ -941,23 +959,26 @@
             class="relative min-h-screen bg-cover bg-center bg-[url('./assets/couples-4-2.jpg')] flex flex-col justify-center items-center text-white py-16"
             id="clients">
             <div class="absolute inset-0 bg-black opacity-60"></div>
-            <h2 class="absolute z-10 top-10 text-3xl font-bold text-center mb-8 text-yellow-300">Our Satisfied Clients
+            <h2
+                class="text-4xl md:text-6xl poetsen-one absolute z-10 top-10 font-bold text-center mb-8 text-yellow-300">
+                Our Satisfied Clients
             </h2>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="absolute z-10 container mt-10">
                 <div class="flex justify-around flex-wrap md:flex-row flex-col items-center gap-10 md:gap-0 mt-20">
                     <!-- Total Clients Counter -->
                     <div class="client-counter">
-                        <h3 class="text-8xl font-semibold client-number text-center inline-block" data-target="1000">0</h3><span class="text-8xl font-semibold">+</span>
+                        <h3 class="text-8xl font-semibold client-number text-center inline-block poetsen-one" data-target="1218">0
+                        </h3><span class="text-8xl font-semibold">+</span>
                         <p class="text-xl text-center">Total Clients</p>
                     </div>
                     <!-- Total Projects Delivered Counter -->
                     <div class="client-counter">
-                        <h3 class="text-8xl font-semibold client-number text-center" data-target="950">0</h3>
+                        <h3 class="text-8xl font-semibold client-number text-center poetsen-one" data-target="952">0</h3>
                         <p class="text-xl text-center">Total Projects Delivered</p>
                     </div>
                     <!-- Total Pending Projects Counter -->
                     <div class="client-counter">
-                        <h3 class="text-8xl font-semibold client-number text-center" data-target="50">0</h3>
+                        <h3 class="text-8xl font-semibold client-number text-center poetsen-one" data-target="56">0</h3>
                         <p class="text-xl text-center">Total Pending Projects</p>
                     </div>
                 </div>
@@ -970,7 +991,7 @@
                 <div class="flex flex-wrap justify-between">
                     <!-- Footer Logo and Info Section -->
                     <div class="w-full md:w-[30%] mb-6 md:mb-0">
-                        <h3 class="text-2xl font-bold text-[#FFED02] mb-4">Photography Studio</h3>
+                        <h3 class="text-2xl font-bold text-[#FFED02] mb-4 poetsen-one">Photography Studio</h3>
                         <p class="text-gray-300">At Flex, we are a team of creative photographers passionate about
                             turning moments into lasting memories. Specializing in weddings, events,
                             commercial photography, we bring a blend of artistry and professionalism to every project.
@@ -980,7 +1001,7 @@
 
                     <!-- Footer Navigation Links -->
                     <div class="w-full md:w-[30%] mb-6 md:mb-0">
-                        <h4 class="text-lg font-semibold text-[#FFED02] mb-4">Quick Links</h4>
+                        <h4 class="text-lg font-semibold text-[#FFED02] mb-4 poetsen-one">Quick Links</h4>
                         <ul class="space-y-2">
                             <li><a href="#" class="text-gray-300 hover:text-yellow-300">Home</a></li>
                             <li><a href="#gallery" class="text-gray-300 hover:text-yellow-300">Gallery</a></li>
@@ -993,7 +1014,9 @@
 
                     <!-- Footer Social Media Links -->
                     <div class="w-full md:w-1/3">
-                        <h4 class="text-lg font-semibold text-[#FFED02] mb-4">Follow Us</h4>
+                        <h4 class="text-lg font-semibold text-[#FFED02] mb-4 poetsen-one">Our Location</h4>
+                        <p class="text-gray-300">First Floor, Hunaid City, A-102, Block-18 Gulistan-e-Johar, Karachi, 07599</p>
+                        <h4 class="text-lg font-semibold text-[#FFED02] mb-4 poetsen-one">Follow Us</h4>
                         <div class="flex space-x-6">
                             <a href="https://www.facebook.com/p/Flex-Digital-Agency-61552695205056/" target="_blank"
                                 class="text-gray-300 hover:text-[#FFED02]">
